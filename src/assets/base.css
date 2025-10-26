@@ -1,0 +1,21 @@
+/* Base CSS file - Add your base styles here */
+/* Reset or base styles can go here */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+  transition: color 0.5s, background-color 0.5s;
+  min-height: 100vh;
+  margin: 0;
+}
