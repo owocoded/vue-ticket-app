@@ -7,7 +7,6 @@
           <h1>Ticket Management</h1>
           <div>
             <button class="btn btn-primary me-2" @click="showCreateForm = true">Create Ticket</button>
-            <button class="btn btn-outline-secondary" @click="handleLogout">Logout</button>
           </div>
         </div>
 

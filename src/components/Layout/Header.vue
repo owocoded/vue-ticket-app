@@ -1,8 +1,8 @@
 <template>
-  <header class="header bg-primary text-white">
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <header class="header bg-light text-white">
+    <nav class="navbar navbar-expand-md navbar-light bg-white">
       <div class="container-fluid">
-        <RouterLink class="navbar-brand text-white" to="/">Vue Ticket App</RouterLink>
+        <RouterLink class="navbar-brand text-dark" to="/">Ticket App</RouterLink>
         
         <button 
           class="navbar-toggler" 
@@ -16,14 +16,14 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <div class="navbar-nav ms-auto">
-            <RouterLink class="nav-link text-white" to="/">Home</RouterLink>
-            <RouterLink v-if="!authStore.isAuthenticated" class="nav-link text-white" to="/auth/login">Login</RouterLink>
-            <RouterLink v-if="!authStore.isAuthenticated" class="nav-link text-white" to="/auth/signup">Sign Up</RouterLink>
-            <RouterLink v-if="authStore.isAuthenticated" class="nav-link text-white" to="/dashboard">Dashboard</RouterLink>
-            <RouterLink v-if="authStore.isAuthenticated" class="nav-link text-white" to="/tickets">Tickets</RouterLink>
-            <button v-if="authStore.isAuthenticated" class="btn btn-outline-light ms-2" @click="handleLogout">Logout</button>
+            <!-- <RouterLink class="nav-link text-dark" to="/">Home</RouterLink> -->
+            <RouterLink v-if="!authStore.isAuthenticated" class="nav-link text-dark" to="/auth/login">Login</RouterLink>
+            <RouterLink v-if="!authStore.isAuthenticated" class="nav-link text-dark" to="/auth/signup">Get started</RouterLink>
+            <RouterLink v-if="authStore.isAuthenticated" class="nav-link text-dark" to="/dashboard">Dashboard</RouterLink>
+            <RouterLink v-if="authStore.isAuthenticated" class="nav-link text-dark" to="/tickets">Tickets</RouterLink>
+            <button v-if="authStore.isAuthenticated" class="btn btn-outline-dark ms-2" @click="handleLogout">Logout</button>
           </div>
         </div>
       </div>
@@ -33,11 +33,14 @@
 
 <script setup lang="ts">
 import { useAuthStore } from '@/stores/auth';
+import { useRouter } from 'vue-router';
 
 const authStore = useAuthStore();
+const router = useRouter();
 
 const handleLogout = () => {
   authStore.logout();
+  router.push('/');
 };
 </script>
 

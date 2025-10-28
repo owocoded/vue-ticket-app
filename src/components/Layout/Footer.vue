@@ -1,11 +1,11 @@
 <template>
-  <footer class="footer mt-auto py-4 bg-dark text-white">
-    <div class="container-landing">
+  <footer class="footer mt-5 py-4 bg-dark text-white">
+    <div class="container-xl">
       <div class="d-flex justify-content-between align-items-center">
-        <span>© {{ year }} Vue Ticket App. All rights reserved.</span>
+        <span>© {{ year }} Ticket App. All rights reserved.</span>
         <div>
-          <a href="#" class="text-white me-3">Contact</a>
-          <a href="#" class="text-white">Privacy Policy</a>
+          <a href="#" class="text-white me-3 text-decoration-none">Terms of Service</a>
+          <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
         </div>
       </div>
     </div>
