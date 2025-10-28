@@ -2,7 +2,7 @@
   <div class="d-flex flex-column min-vh-100">
     <Header />
     <main class="flex-grow-1">
-      <div class="container-xl py-4" style="max-width: 1440px;">
+      <div class="container-landing py-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
           <h1>Dashboard</h1>
           <button class="btn btn-outline-danger" @click="handleLogout">Logout</button>
