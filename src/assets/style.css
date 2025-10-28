@@ -34,13 +34,13 @@
 /* On larger desktop screens, use more of available width while keeping max-width constraint */
 @media (min-width: 1440px) {
   .container-landing {
-    width: 90%; /* Use 90% of available width on very large screens */
+    width: 100%; /* Use full available width up to max-width on very large screens */
     max-width: var(--max-width); /* But still respect the 1440px max */
   }
   
   /* Also make sure the footer uses the same responsive container */
   .footer .container-landing {
-    width: 90%;
+    width: 100%;
     max-width: var(--max-width);
   }
 }
